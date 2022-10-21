@@ -3,7 +3,9 @@ $Days = 365
 $searchdate = (Get-Date).Adddays(-($Days))
 $searchdate
 
-$DormantLogons = Get-ADUser -Filter {(Enabled -eq $True) -and (LastLogonTimeStamp -lt $searchdate)} -Properties * |
+$searchbase = "DC=childdomain,DC=parentdomain,DC=co,DC=za"
+
+$DormantLogons = Get-ADUser -Filter {(Enabled -eq $True) -and (LastLogonTimeStamp -lt $searchdate)} -Properties * -searchbase $searchbase |
     Select Name,LastLogonDate,Enabled,SamAccountName,@{Name="PasswordLastSet";Expression={[datetime]::FromFileTimeUTC($_.pwdLastSet)}}
 
 # could have done oneliner - argh but i like peanuts
