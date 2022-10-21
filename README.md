@@ -18,6 +18,6 @@ Obtain the search base Distinguished name field "distinguishedName", value from 
 
 Sample output from the PowerShell Script with random user account last logon date and last password set date to verify.
 
-![AD Account from data variable verify](image002.png)
+![AD Account from data variable verify](image003.png)
 
 This can be used during redteam or penetration test security assessment.
