@@ -10,7 +10,7 @@ crackmapexec -t 1 smb domaincontroller.domain.internal -u userlist.txt -p passwo
 ```
 Above is crackmapexec command to spray the password of password using list of possible active directory user accounts.
 
-Provide a date since before password for user accounts in Active Directory was last set.
+Provide a number of days to calculate a date since before password for user accounts in Active Directory was last changed and when last account logged on.
 
 Obtain the search base Distinguished name field "distinguishedName", value from active directory, using attribute editor in Active Directory Users and Computers MMC.
 
