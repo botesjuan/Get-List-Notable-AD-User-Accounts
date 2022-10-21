@@ -6,7 +6,7 @@ These accounts is security risk to the organization, as their passwords may not 
 Malicious actors finding these accounts can use it to gain read access to Active Directory through method such as password spray using crackmapexec.
 
 ```bash
-crackmapexec smb prd-hodc05.ho.fosltd.co.za -u tfg_users.txt -p passwords.txt --continue-on-success
+crackmapexec -t 1 smb domaincontroller.domain.internal -u userlist.txt -p password --continue-on-success
 ```
 Above is crackmapexec command to spray the password of password using list of possible active directory user accounts.
 
