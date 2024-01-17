@@ -1,7 +1,7 @@
 $verbosepreference = "continue"  
   
 $searchdate = "2019-01-01" #yyyy-MM-dd format  
-$searchbase = "DC=ho,DC=FosLtd,DC=co,DC=za"  
+$searchbase = "DC=ho,DC=domain,DC=com"  
   
 $passwordsNotChangedSince = $([datetime]::parseexact($searchdate,'yyyy-MM-dd',$null)).ToFileTime()  
 write-verbose "Finding users whose passwords have not changed since $([datetime]::fromfiletimeUTC($passwordsNotChangedSince))"  
