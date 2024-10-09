@@ -1,6 +1,10 @@
 # Notable Active Directory Accounts
 
-Purpose of this PowerShell Script is to Extract a list of notable AD User Accounts that have not change their passwords and did not logon since given date.
+>Purpose of these PowerShell Scripts:
+1. Extract a list of notable AD User Accounts that have not change their passwords and did not logon since given date. - Dormant
+2. List all possible accounts with SPN values kerberoastable from Active Directory.
+
+----  
 
 These accounts are a security risk to an organization, as their passwords may not comply to latest domain password policy and has been dormant.
 Malicious actors finding these accounts can use it to gain read access to Active Directory through method such as a password spray attack using crackmapexec.
